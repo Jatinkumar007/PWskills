@@ -1,0 +1,126 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #f0f4f5;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header>div>img{
+    width: 140px;
+    margin-top: 10px;
+}
+header>div>a{
+    text-decoration: none;
+    margin-left: 30px;
+    color: black;
+    font-weight: bolder;
+}
+main{
+    display: flex;
+    background-image: url("./Pics/stethoscope.png");
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position-x:400px;
+}
+.one{
+    margin-left: 200px;
+    margin-top: 100px;
+}
+.one h1{
+    font-size: 50px;
+}
+.one p{
+    color: #a2a4a4;
+}
+.one>div:nth-child(3){
+    margin-left: 520px;
+}
+button{
+    padding: 10px 25px;
+    border: none;
+    background-color: #22bc7e;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#submit{
+    padding: 10px 100px;
+    border: none;
+    background-color: #22bc7e;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.size{
+    width: 450px;
+    position: relative;
+    left: 200px;
+    top: 270px;
+    z-index: 1;
+}
+.size1{
+    z-index: 2;
+    width: 470px;
+    position: absolute;
+    right: 120px;
+    top: 280px;
+}
+.size2{
+    z-index: 5;
+    position: absolute;
+    right: 100px;
+    top: 60px;
+    width: 530px;
+}
+.move{
+    margin-left: 570px;
+}
+#main{
+    text-align: center;
+    margin-top: 150px;
+    font-size: 20px;
+}
+#main>h1{
+    color: #22bc7e;
+}
+#main>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main>div>div{
+    padding: 0px 20px 0px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#main b{
+    color: #22bc7e;
+}
+#form{
+    margin-left: 650px;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 300px;
+    height: 420px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    border-radius: 15px;
+}
+form{
+    padding-left: 20px;
+}
+form>h1{
+    text-align: center;
+}
+.inc{
+    padding: 5px 40px;
+}
+input,textarea{
+    border: none;
+}
