@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px 50px;
+            border-radius: 20px;
+            background-color: rgb(230, 230, 230);
+        }
+        body>div > *{
+            margin-left: 10px;
+            text-align: center;
+        }
+        body>div >div>button{
+            display: flex;
+            margin: auto;
+            margin-top: 20px;
+        }
+        button{
+            padding: 8px 25px;
+            font-weight: bolder;
+            background-color: green;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        h1{
+            color: rgb(255, 119, 142);
+        }
+        span{
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Counter App</h1>
+        <button id="dec">Decrement by 1</button>
+        <span id="display">0</span>
+        <button id="inc">Increment by 1</button>
+        <div>
+            <button id="reset">Reset Value</button>
+        </div>
+    </div>
+</body>
+<script>
+    let inc=document.getElementById("inc");
+    let dec=document.getElementById("dec");
+    let reset=document.getElementById("reset");
+    let display=document.getElementById("display");
+
+    inc.addEventListener("click", ()=>{
+        display.textContent=Number(display.textContent)+1;
+    })
+    dec.addEventListener("click", ()=>{
+        if(Number(display.textContent)>0){
+            display.textContent=Number(display.textContent)-1;
+        } 
+    })
+    reset.addEventListener("click", ()=>{
+        display.textContent=+0;
+    })
+</script>
+</html>

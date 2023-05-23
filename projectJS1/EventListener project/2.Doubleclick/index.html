@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoubleClick</title>
+    <style>
+        button{
+            padding: 10px 25px;
+            border-radius: 10px;
+            background-color: green;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Paragraph</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, impedit quo cupiditate praesentium, cumque ea modi amet reiciendis aperiam non tempora. At ea temporibus architecto officia praesentium quas aliquid obcaecati corporis harum, delectus earum laborum inventore, enim veniam maiores officiis, eius cupiditate. Tempora ullam quaerat enim nam minima, mollitia eveniet facilis assumenda incidunt voluptatum laborum sint minus maxime ratione quia. Assumenda quas earum placeat saepe unde deserunt, soluta et quia doloribus sit officiis possimus esse beatae sunt neque quam ad facilis! Fuga aperiam, autem harum voluptates repellendus sit voluptatibus aspernatur vel eius sed excepturi aliquam. Nulla maiores ex vel autem.</p>
+    <button>Hide the Paragraph</button>
+</body>
+<script>
+    let h1=document.querySelector("h1");
+    let p=document.querySelector("p");
+    let btn=document.querySelector("button");
+
+   btn.addEventListener("dblclick",()=>{hide()});
+
+   function hide(){
+    if(p.style.display!="none"){
+        p.style.display="none"
+    }
+    else{
+        p.style.display="block"
+    }
+    conosle.log("hide")
+   }
+</script>
+</html>

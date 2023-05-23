@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOver</title>
+    <style>
+        h1{
+            text-align: center;
+            margin-top: 250px;
+        }
+        button{
+            color: white;
+            background-color: pink;
+            border: none;
+            padding: 15px 35px;
+            display: block;
+            margin: auto;
+            font-size: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body><h1>Hover the Mouse</h1>
+    <button>PINK</button>
+</body>
+<script>
+    let btn=document.querySelector("button");
+
+   btn.addEventListener("mouseover",()=>{
+    btn.style.background="green";
+    btn.innerText="GREEN";
+   })
+
+   btn.addEventListener("mouseout",()=>{
+    btn.style.background="pink";
+    btn.innerText="PINK";
+   })
+  
+</script>
+</html>

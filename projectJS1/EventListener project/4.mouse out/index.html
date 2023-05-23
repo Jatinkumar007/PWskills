@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseOut</title>
+    <style>
+        button{
+            display: block;
+            margin: auto;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: aquamarine;
+            color: palevioletred;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <button>Point your cursor here</button>
+
+    <div>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tenetur soluta debitis quae aliquid magnam sunt totam. Doloribus commodi reiciendis, delectus rerum veritatis rem! Omnis molestiae ad adipisci exercitationem laudantium, aliquam neque est, numquam reiciendis, magni sapiente perferendis quo deserunt similique accusantium? Eligendi, accusantium. Quidem qui laborum ratione molestiae animi voluptatem ut, eveniet expedita fuga fugit obcaecati quas neque! Cupiditate illo voluptate, quae corporis, exercitationem perspiciatis voluptates obcaecati amet adipisci error magnam autem ad rem architecto reiciendis culpa doloremque nulla vero quisquam vel. Nesciunt vitae ipsam enim saepe velit repellat, aliquid odit illum quas nobis soluta aut, deserunt veritatis quia?</p>
+    </div>
+</body>
+<script>
+    let btn=document.querySelector("button");
+    let text=document.getElementById("text");
+
+   btn.addEventListener("mouseout",()=>{
+    text.style.display="block";
+   })
+   btn.addEventListener("mouseover",()=>{
+    text.style.display="none";
+   })
+</script>
+</html>
