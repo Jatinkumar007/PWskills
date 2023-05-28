@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding List</title>
+</head>
+<body>
+    <h1>What you'll learn</h1>
+
+    <ol>
+       <li>Html and semantics</li>
+       <li>starting with Css</li>
+    </ol>
+    <button onclick="create()">Click Here</button>
+</body>
+<script>
+   function create(){
+    let list=["react","node.js","express","sql","mongodb","github"];
+    let ol=document.querySelector("ol");
+    let check=0;
+    for(let i=0;i<list.length;i++){
+          check++;
+        let li=document.createElement("li");
+        li.textContent=list[i];
+        ol.appendChild(li);
+    }
+    if(check==list.length){
+        alert("all items have been added.");
+    }
+   }
+
+    
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving image</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        img{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./wanderlust.jpg" alt="error" id="image">
+    <script>
+        let image = document.getElementById("image");
+        let positionX = 0;
+        let positionY = 0;
+        let speed = 15;
+    
+        let handle=(e)=> {
+          let keyCode = e.keyCode;
+    
+          if (keyCode === 37) {               //value of left arrow :- 37
+            positionX -= speed;      
+          } else if (keyCode === 38) {        //value of up arrow :- 38
+            positionY -= speed;
+          } else if (keyCode === 39) {        //value of right arrow :- 39
+            positionX += speed;
+          } else if (keyCode === 40) {        //value of down arrow :- 40
+            positionY += speed;
+          }
+          updateposition();
+        }
+        
+        let updateposition = ()=> {
+          image.style.left = positionX + 'px';
+          image.style.top = positionY + 'px';
+        }
+        document.addEventListener('keydown',handle);
+      </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ipsa
+      quaerat eos velit obcaecati aspernatur corrupti ducimus voluptatibus,
+      alias labore voluptatem impedit quas facere accusantium veritatis sed quo
+      temporibus nostrum fugit amet. Eligendi expedita ab, natus consectetur,
+      ipsa sequi ea nesciunt quae illo non consequuntur similique quod dolorum
+      voluptates dignissimos tenetur delectus ad aperiam fuga quibusdam
+      exercitationem quam quasi molestias ratione? Odio ea fugiat eveniet
+      aliquid error asperiores fugit! Fugit, distinctio totam. Deleniti porro
+      aliquam repudiandae reiciendis laborum aut molestias numquam accusantium
+      expedita pariatur, ipsam adipisci? Beatae assumenda velit repellendus
+      facilis laborum possimus adipisci esse, deleniti quia amet aliquid animi
+      nulla reiciendis distinctio sequi. Distinctio alias non nisi soluta
+      cupiditate sed reprehenderit dolor iure ullam? Neque corporis voluptate
+      quaerat eaque quibusdam et, id vero. Eveniet id itaque numquam, debitis
+      quas consectetur quis ullam tempora, excepturi, iusto illum ea neque
+      quaerat et earum? Vitae possimus iure deleniti perspiciatis in, cum
+      reprehenderit odit ad similique numquam porro aperiam nihil veniam
+      pariatur impedit veritatis. Commodi error aut et rem quidem, corporis,
+      architecto inventore suscipit dicta, praesentium aliquid dolor accusamus.
+      Ipsa accusantium ea quae itaque quod explicabo eum rerum modi tempora
+      blanditiis possimus voluptas cupiditate omnis error pariatur, vel deserunt
+      facilis mollitia inventore reiciendis magnam? Consequatur debitis libero,
+      id, necessitatibus aspernatur placeat facilis minus tempora consequuntur,
+      molestias voluptatibus illum beatae a ducimus fugiat nobis! Temporibus,
+      aut optio. Ex nobis mollitia quia et facere sapiente illum? Dolores,
+      alias. Eaque odio pariatur animi nobis fugit, cupiditate non reiciendis
+      commodi atque, beatae ipsum, laudantium provident quam. Distinctio quae
+      similique necessitatibus eaque magni, aut maiores inventore eum neque
+      quasi iusto voluptas qui dolore culpa soluta hic non incidunt ad, deleniti
+      labore ipsa quod. Fugiat alias iste vel tenetur suscipit, voluptatum vitae
+      rem natus ad neque animi velit eum numquam at voluptatibus distinctio
+      eligendi architecto quisquam vero, modi, magni quia nostrum laudantium.
+      Quas, a! Laboriosam adipisci, doloremque qui amet cupiditate modi eaque
+      porro nemo asperiores earum omnis voluptas nisi. Ullam laboriosam.
+    </p>
+  </body>
+  <script>
+    let p=document.querySelector("p");
+    let word=p.textContent.trim().split(" ");
+
+    for(let i=0;i<word.length;i++){
+        let span=document.createElement("span");
+        if(word[i].length>8){
+            span.textContent=word[i];
+            span.classList.add("yellow");
+            word[i]=span.outerHTML;          //<span>lorem</span>  <= outerHTML
+        }
+    }
+    p.innerHTML=word.join(" ");
+  </script>
+</html>

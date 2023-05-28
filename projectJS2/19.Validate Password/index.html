@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            height: 100vh;
+            padding: 0px;
+            margin: 0px;
+        }
+        form{
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            padding: 50px 20px;
+            margin: auto;
+            margin-top: 200px;
+
+        }
+        input{
+            padding: 8px 30px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <label for="email">Email</label> <br><br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email"><br><br>
+        <label for="email">Password</label> <br><br>
+        <input type="password" id="password" name="password" placeholder="Enter your Password"><br><br>
+        <button onclick="check(event)">Submit</button>
+    </form><br>
+    <h1 id="text"></h1>
+</body>
+<script>
+    let email=document.getElementById("email");
+    let password=document.getElementById("password");
+    let text=document.getElementById("text");
+    function check(event){
+       event.preventDefault();
+        let eml=false;
+        let passwd=false;
+        for(let i=0;i<email.value.length;i++){
+            if(email.value[i]=="@"){
+                eml=true;
+                break;
+            }
+        }
+       if(password.value.length>=8){
+        passwd=true;
+       }
+
+    if(eml && passwd){
+        text.textContent="Valid email and password!";
+        text.style.color="green";
+    }
+    else{
+        text.textContent="Invalid email or password!";
+        text.style.color="red";
+    }
+    }
+</script>
+</html>
